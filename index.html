@@ -1,98 +1,406 @@
-border-right: 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Xavier | Portfolio</title>
 
-        .skill:last-child {
-          border-bottom: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section class="hero" id="top">
-        <nav>
-          <a class="brand" href="#top">Justin Xavier</a>
-          <a class="nav-link" href="tel:+918593828963">Contact</a>
-        </nav>
-        <div class="hero-content">
-          <p class="eyebrow reveal">BCA Third Year Student | Data Analytics Aspirant</p>
-          <h1 class="reveal-delay">Justin Xavier</h1>
-          <p class="hero-text reveal-delay-2">
-            A motivated BCA student building a foundation in programming, data analytics, databases, and networking, currently gaining practical exposure through an internship at IIT Palakkad.
-          </p>
-          <div class="actions reveal-delay-3">
-            <a class="button primary" href="#profile">View Profile</a>
-            <a class="button" href="https://www.linkedin.com/in/justin-xavier-data-analytics" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-      </section>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-      <section id="profile">
-        <div class="wrap split">
-          <div>
-            <p class="eyebrow">Profile</p>
-            <h2>Focused on turning data and code into useful work.</h2>
-          </div>
-          <div class="body-copy">
-            <p>I am currently pursuing my third year Bachelor of Computer Applications and preparing for entry-level opportunities in data analytics, programming, and related technical areas.</p>
-            <p>My academic learning is supported by add-on training in eSim, GIMP, data analytics, and practical exposure from my ongoing internship at IIT Palakkad.</p>
-          </div>
-        </div>
-      </section>
+<style>
 
-      <section class="dark">
-        <div class="wrap">
-          <p class="eyebrow">Core Skills</p>
-          <h2>Practical tools for analytics and development.</h2>
-          <div class="skill-grid">
-            <div class="skill">Python</div>
-            <div class="skill">C Programming</div>
-            <div class="skill">Excel</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Networking</div>
-          </div>
-        </div>
-      </section>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-      <section>
-        <div class="wrap split">
-          <div>
-            <p class="eyebrow">Learning</p>
-            <h2>Courses and experience</h2>
-          </div>
-          <div class="list body-copy">
-            <p>IIT Bombay online add-on courses in eSim, GIMP, and related open-source tools.</p>
-            <p>Data Analytics add-on course from Srishti Innovative.</p>
-            <p>Current internship experience at IIT Palakkad.</p>
-          </div>
-        </div>
-      </section>
+html{
+scroll-behavior:smooth;
+}
 
-      <section class="career">
-        <div class="wrap">
-          <p class="eyebrow">Career Direction</p>
-          <h2>Looking for roles where analysis, programming, and problem-solving meet.</h2>
-          <div class="interests">
-            <div class="interest"><span class="dot"></span>Data analytics roles</div>
-            <div class="interest"><span class="dot"></span>Programming and software support</div>
-            <div class="interest"><span class="dot"></span>Database and reporting work</div>
-            <div class="interest"><span class="dot"></span>Technical operations in IT teams</div>
-          </div>
-        </div>
-      </section>
+body{
+background:#081018;
+color:white;
+overflow-x:hidden;
+}
 
-      <footer>
-        <div class="wrap">
-<div>
-            <p class="eyebrow">Contact</p>
-            <h2>Justin Xavier</h2>
-          </div>
-          <div class="contact">
-            <p>Phone: +91 8593828963</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-xavier-data-analytics" target="_blank" rel="noreferrer">linkedin.com/in/justin-xavier-data-analytics</a></p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  </body>
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:5px;
+color:#8fffe0;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#8fffe0;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.tag{
+letter-spacing:8px;
+font-size:14px;
+color:#9ef9d8;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:80px;
+font-weight:800;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+margin-top:20px;
+line-height:1.8;
+color:#ddd;
+}
+
+.btns{
+margin-top:35px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+text-decoration:none;
+font-weight:600;
+letter-spacing:3px;
+transition:.3s;
+}
+
+.primary{
+background:#006b3c;
+color:white;
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.4);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+font-size:40px;
+margin-bottom:40px;
+color:#8fffe0;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.box{
+background:#111827;
+padding:25px;
+border-radius:20px;
+transition:.3s;
+}
+
+.box:hover{
+transform:translateY(-10px);
+}
+
+.box h3{
+color:#8fffe0;
+margin-bottom:10px;
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:#050505;
+color:#aaa;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">JUSTIN XAVIER</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#internship">Internship</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="tag">
+BCA THIRD YEAR STUDENT | DATA ANALYTICS ASPIRANT
+</div>
+
+<h1>Justin Xavier</h1>
+
+<p>
+A motivated BCA student building a strong foundation in
+programming, data analytics, databases and networking,
+currently gaining practical exposure through an internship
+at IIT Palakkad.
+</p>
+
+<div class="btns">
+
+<a href="#about" class="btn primary">
+VIEW PROFILE
+</a>
+
+<a href="https://linkedin.com/in/justin-xavier-dev"
+class="btn secondary">
+LINKEDIN
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+I am Justin Xavier, currently pursuing BCA 3rd Year.
+Skilled in Python, C Programming, SQL, Excel,
+Networking and Data Analytics.
+
+I am passionate about software development,
+problem solving and emerging technologies.
+Currently doing an internship at IIT Palakkad.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="grid">
+
+<div class="box"><h3>Python</h3></div>
+<div class="box"><h3>C Programming</h3></div>
+<div class="box"><h3>SQL</h3></div>
+<div class="box"><h3>Excel</h3></div>
+<div class="box"><h3>Networking</h3></div>
+<div class="box"><h3>Data Analytics</h3></div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="card">
+
+<h3>Bachelor of Computer Applications (BCA)</h3>
+
+<br>
+
+<p>
+Currently pursuing BCA 3rd Year and building
+strong technical knowledge in programming,
+database management, networking and analytics.
+</p>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="title">Certifications</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>IIT Bombay</h3>
+<p>eSim Certification</p>
+</div>
+
+<div class="box">
+<h3>IIT Bombay</h3>
+<p>GIMP Certification</p>
+</div>
+
+<div class="box">
+<h3>Srishti Innovative</h3>
+<p>Data Analytics Add-On Course</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="internship">
+
+<h2 class="title">Internship</h2>
+
+<div class="card">
+
+<h3>IIT Palakkad</h3>
+
+<br>
+
+<p>
+Currently gaining practical exposure through
+internship activities and enhancing technical
+and professional skills.
+</p>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>Portfolio Website</h3>
+<p>Personal responsive portfolio website.</p>
+</div>
+
+<div class="box">
+<h3>Student Management System</h3>
+<p>Python based student record management project.</p>
+</div>
+
+<div class="box">
+<h3>Data Analytics Dashboard</h3>
+<p>Analytics and visualization project.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="card">
+
+<p><strong>Email:</strong> justin.xavier.dev@example.com</p>
+
+<br>
+
+<p>
+<strong>LinkedIn:</strong>
+https://linkedin.com/in/justin-xavier-dev
+</p>
+
+<br>
+
+<p>
+<strong>Phone:</strong>
++91 98765 43210
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Justin Xavier Portfolio
+
+</footer>
+
+</body>
+</html>
